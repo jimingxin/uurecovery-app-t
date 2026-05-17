@@ -1,0 +1,6 @@
+framework module Pods_UURecoveryApp {
+  umbrella header "Pods-UURecoveryApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module JJCarouselView {
+  umbrella header "JJCarouselView-umbrella.h"
+
+  export *
+  module * { export * }
+}
