@@ -28,8 +28,10 @@ jobs:
         run: |
           echo "$P12_BASE64" | base64 --decode > cert.p12
           security create-keychain -p temp temp.keychain
-          security import cert.p12 -k temp.keychain -P "$P12_PASSWORD" -A
-          security set-key-partition-list -S temp.keychain -k temp -u
+          security list-keychains -s temp.keychain
+          security unlock-keychain -p temp temp.keychain
+          security import cert.p12 -k temp.keychain -P "$P12_PASSWORD" -A -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k temp temp.keychain
           security default-keychain -s temp.keychain
 
       - name: Import provisioning profile
