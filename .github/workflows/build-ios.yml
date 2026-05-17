@@ -42,13 +42,22 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
 
+      - name: Debug - List keychains and certificates
+        run: |
+          security list-keychains
+          security find-certificate -a
+
       - name: Build & Archive
+        env:
+          DEVELOPER_DIR: /Applications/Xcode_16.2.app/Contents/Developer
         run: |
           xcodebuild clean archive \
             -workspace UURecoveryApp.xcworkspace \
             -scheme UURecoveryApp \
             -configuration Release \
-            -archivePath build/UURecoveryApp.xcarchive
+            -archivePath build/UURecoveryApp.xcarchive \
+            -verbose \
+            CODE_SIGN_STYLE=Manual
 
       - name: Export IPA
         run: |
