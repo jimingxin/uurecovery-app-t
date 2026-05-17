@@ -1,0 +1,143 @@
+PODS:
+  - Alamofire (5.10.2)
+  - AlipaySDK-iOS (15.8.30)
+  - BDASignalSDK (1.0.5)
+  - CXSwiftCommonModule (1.0.0):
+    - CXSwiftCommonModule/Const (= 1.0.0)
+    - CXSwiftCommonModule/Extension (= 1.0.0)
+    - CXSwiftCommonModule/MBProgressHUD (= 1.0.0)
+    - CXSwiftCommonModule/NavigationBar (= 1.0.0)
+    - CXSwiftCommonModule/Network (= 1.0.0)
+    - CXSwiftCommonModule/Reusable (= 1.0.0)
+    - CXSwiftCommonModule/Router (= 1.0.0)
+    - CXSwiftCommonModule/Then (= 1.0.0)
+    - CXSwiftCommonModule/Tools (= 1.0.0)
+  - CXSwiftCommonModule/Const (1.0.0):
+    - CXSwiftCommonModule/Extension
+  - CXSwiftCommonModule/Extension (1.0.0):
+    - Alamofire
+    - CXSwiftCommonModule/Tools
+    - KakaJSON
+    - Kingfisher
+    - MJRefresh
+    - Moya/RxSwift
+    - RxCocoa
+  - CXSwiftCommonModule/MBProgressHUD (1.0.0)
+  - CXSwiftCommonModule/NavigationBar (1.0.0):
+    - CXSwiftCommonModule/Extension
+  - CXSwiftCommonModule/Network (1.0.0):
+    - CXSwiftCommonModule/Extension
+  - CXSwiftCommonModule/Reusable (1.0.0)
+  - CXSwiftCommonModule/Router (1.0.0):
+    - CXSwiftCommonModule/Extension
+  - CXSwiftCommonModule/Then (1.0.0)
+  - CXSwiftCommonModule/Tools (1.0.0)
+  - DefaultsKit (0.3.2)
+  - ESTabBarController-swift (2.8.0)
+  - FlexLayout (2.0.10)
+  - IGListDiffKit (4.0.0)
+  - IGListKit (4.0.0):
+    - IGListDiffKit (= 4.0.0)
+  - IQKeyboardManager (6.5.19)
+  - JJCarouselView (0.1.1)
+  - JXSegmentedView (1.4.1)
+  - KakaJSON (1.1.2)
+  - KeychainSwift (24.0.0)
+  - Kingfisher (7.12.0)
+  - MJRefresh (3.7.9)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
+  - PinLayout (1.10.5)
+  - RxCocoa (6.9.0):
+    - RxRelay (= 6.9.0)
+    - RxSwift (= 6.9.0)
+  - RxRelay (6.9.0):
+    - RxSwift (= 6.9.0)
+  - RxSwift (6.9.0)
+  - SnapKit (5.7.1)
+  - ZCycleView (1.0.3)
+  - ZLPhotoBrowser (4.6.0.1):
+    - ZLPhotoBrowser/Core (= 4.6.0.1)
+  - ZLPhotoBrowser/Core (4.6.0.1)
+
+DEPENDENCIES:
+  - AlipaySDK-iOS
+  - BDASignalSDK
+  - CXSwiftCommonModule (from `./CXSwiftCommonModule`)
+  - DefaultsKit
+  - ESTabBarController-swift
+  - FlexLayout
+  - IGListKit (= 4.0.0)
+  - IQKeyboardManager
+  - JJCarouselView
+  - JXSegmentedView
+  - KeychainSwift (from `./keychain-swift`)
+  - PinLayout
+  - SnapKit
+  - ZCycleView (from `./ZCycleView`)
+  - ZLPhotoBrowser
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlipaySDK-iOS
+    - BDASignalSDK
+    - DefaultsKit
+    - ESTabBarController-swift
+    - FlexLayout
+    - IGListDiffKit
+    - IGListKit
+    - IQKeyboardManager
+    - JJCarouselView
+    - JXSegmentedView
+    - KakaJSON
+    - Kingfisher
+    - MJRefresh
+    - Moya
+    - PinLayout
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - ZLPhotoBrowser
+
+EXTERNAL SOURCES:
+  CXSwiftCommonModule:
+    :path: "./CXSwiftCommonModule"
+  KeychainSwift:
+    :path: "./keychain-swift"
+  ZCycleView:
+    :path: "./ZCycleView"
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  AlipaySDK-iOS: 913a1df564c64798903e71cf3d63141d9e1904d2
+  BDASignalSDK: b5e1d85fafec4a7f79a37b7cfd34c8ac128785c3
+  CXSwiftCommonModule: 16edd50f2ff13a2118b01d1881a748f1f2884fce
+  DefaultsKit: ff9b29089d6fc08651b81be2d2387bee6eb98b75
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  FlexLayout: ea94491c923485f7f28891cb5b10245d22df380b
+  IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
+  IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  JJCarouselView: 7d1630930e18c59643b61516cc913a0bc4a91412
+  JXSegmentedView: cd73555ce2134d1656db2cb383ba9c2f36fb5078
+  KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
+  KeychainSwift: 007c4647486e4563adca839cf02cef00deb3b670
+  Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
+  MJRefresh: ff9e531227924c84ce459338414550a05d2aea78
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  PinLayout: f6c2b63a5a5b24864064e1d15c67de41b4e74748
+  RxCocoa: ac16414696ae706516be3e1ab00fcce5bdc9be8a
+  RxRelay: 6b0c930e5cef57d5fe2032571e5e65b78e3cbdb1
+  RxSwift: 31649ace6aceeb422e16ff71c60804f9c3281ed9
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  ZCycleView: cfc8d9c3b2cb6f4270375c539c60aaa59e3bb976
+  ZLPhotoBrowser: 20f32e6429448cc1c008795a1b55472d5772939c
+
+PODFILE CHECKSUM: 7dc3f899b18ae3949951b127744f41de6947e28b
+
+COCOAPODS: 1.16.2

@@ -1,0 +1,29 @@
+PODS:
+  - SDWebImage (5.9.5):
+    - SDWebImage/Core (= 5.9.5)
+  - SDWebImage/Core (5.9.5)
+  - SnapKit (4.2.0)
+  - ZCycleView (1.0.3)
+
+DEPENDENCIES:
+  - SDWebImage
+  - SnapKit
+  - ZCycleView (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SDWebImage
+    - SnapKit
+
+EXTERNAL SOURCES:
+  ZCycleView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  ZCycleView: cfc8d9c3b2cb6f4270375c539c60aaa59e3bb976
+
+PODFILE CHECKSUM: 37840ba4c23eee7af160f8579404387ffee159bd
+
+COCOAPODS: 1.15.2
