@@ -56,7 +56,7 @@ jobs:
             -scheme UURecoveryApp \
             -configuration Release \
             -archivePath build/UURecoveryApp.xcarchive \
-            -verbose \
+            -sdk iphoneos \
             CODE_SIGN_STYLE=Manual
 
       - name: Export IPA
