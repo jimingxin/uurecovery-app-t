@@ -51,24 +51,25 @@ class KeFuListSectionController: ListSectionController {
         }
         
         let mod_sync = userDefaults.get(for: MXDefaultKey.yy_kefu_mod)
-        if index == 0 {
-            // 默认客服直接跳转
-            goToWeb(url: item.crmUrl, title: item.crmName)
-        } else {
-            
-            if let mod = mod_sync {
-                // 跳转到客服页面
-                MBProgressHUD.yx_showMessage("打开之前联系过的工程师客服")
-                goToWeb(url: mod.crmUrl, title: mod.crmName)
-                return
-            }
-            
-            if index > 0 {
-                userDefaults.set(item, for: MXDefaultKey.yy_kefu_mod);
-            }
-            // 跳转到客服页面
-            goToWeb(url: item.crmUrl, title: item.crmName)
-        }
+        goToWeb(url: item.crmUrl, title: item.crmName)
+//        if index == 0 {
+//            // 默认客服直接跳转
+//            goToWeb(url: item.crmUrl, title: item.crmName)
+//        } else {
+//            
+//            if let mod = mod_sync {
+//                // 跳转到客服页面
+//                MBProgressHUD.yx_showMessage("打开之前联系过的工程师客服")
+//                goToWeb(url: mod.crmUrl, title: mod.crmName)
+//                return
+//            }
+//            
+//            if index > 0 {
+//                userDefaults.set(item, for: MXDefaultKey.yy_kefu_mod);
+//            }
+//            // 跳转到客服页面
+//            goToWeb(url: item.crmUrl, title: item.crmName)
+//        }
         
     }
     
