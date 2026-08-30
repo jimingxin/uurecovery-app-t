@@ -61,6 +61,15 @@ class ServerDetailViewController: BaseViewController {
     lazy var v_tech_fee = UIView().then { v in
 //        v.backgroundColor = .hex("#FFF8F0")
     }
+
+    // 技术费说明入口
+    lazy var btn_tech_fee = UIButton(type: .custom).then { button in
+        button.setImage(UIImage(named: "laba"), for: .normal)
+    }
+
+    lazy var lab_tech_fee = UILabel(title: "费用说明以及价格明细", textColor: .hex("#FF544E"), fontSize: 12).then { label in
+        label.isUserInteractionEnabled = false
+    }
     
     // 流程
     lazy var v_flow = ServerFlowView()
@@ -116,13 +125,17 @@ class ServerDetailViewController: BaseViewController {
         v_bottom.addSubview(lab_pay)
         
         // 技术费说明视图子视图
-        let techFeeLabel = UILabel(title: "※因数据恢复技术难度大成本高，数据恢复成功后，需收取一次性技术费298元", textColor: .hex("#FF544E"), fontSize: 12)
-        techFeeLabel.numberOfLines = 0
-        v_tech_fee.addSubview(techFeeLabel)
-        
-        techFeeLabel.snp.makeConstraints { make in
+        v_tech_fee.addSubview(btn_tech_fee)
+        v_tech_fee.addSubview(lab_tech_fee)
+
+        btn_tech_fee.snp.makeConstraints { make in
             make.leading.equalTo(12)
-            make.trailing.equalTo(-12)
+            make.centerY.equalToSuperview()
+            make.width.height.equalTo(20)
+        }
+
+        lab_tech_fee.snp.makeConstraints { make in
+            make.leading.equalTo(btn_tech_fee.snp.trailing).offset(8)
             make.centerY.equalToSuperview()
         }
         
@@ -145,7 +158,7 @@ class ServerDetailViewController: BaseViewController {
                 flex.addItem(v_order_select).margin(10).height(Const.adaptHeight(80))
                 // 技术费说明（根据版本判断是否显示）
                 if Tools.checkUpdate() {
-                    flex.addItem(v_tech_fee).marginLeft(10).marginRight(10).marginTop(0).height(40)
+                    flex.addItem(v_tech_fee).marginLeft(10).marginRight(10).marginTop(0).height(26)
                 }
                 // 方案对比
                 addCompareView(flex: flex)
@@ -219,10 +232,22 @@ class ServerDetailViewController: BaseViewController {
     }
     
     override func bindViewModel() {
+        btn_tech_fee.rx.tap.bind { [weak self] _ in
+            self?.openTechFeeWebView()
+        }.disposed(by: disposeBag)
+
         // 唤起支付按钮
         btn_pay.rx.tap.bind {[weak self] _ in
             self?.createOrder()
         }.disposed(by: disposeBag)
+    }
+
+    private func openTechFeeWebView() {
+        let vc = WebViewController()
+        vc.str_url = "\(API.baseURL)\(API.DataRecovery.feeUrl.rawValue)"
+        vc.backEnable = true
+        vc.str_title = "费用说明以及价格明细"
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func setMoneyText() {

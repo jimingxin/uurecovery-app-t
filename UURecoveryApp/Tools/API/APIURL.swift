@@ -67,6 +67,8 @@ public struct API {
         case findSdkOnOff = "/uuServer/msMemberInfo/findSdkOnOff"
         // 获取所有的客服
         case findAllCrmList = "/uuServer/msCrmInfo/findAllCrmList"
+        // 费用说明
+        case feeUrl = "/fee"
     }
     
     enum HomeApi: String {

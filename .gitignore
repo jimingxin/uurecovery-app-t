@@ -1,0 +1,43 @@
+# macOS
+**/.DS_Store
+
+# Xcode user-specific settings
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Xcode build products and derived data
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+Pods/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.html
+fastlane/test_output/
+
+# App signing and provisioning artifacts
+*.mobileprovision
+*.p12
+
+# Temporary and local files
+*.tmp
+*.swp
+*.swo
+.env
+.env.*
+!.env.example
