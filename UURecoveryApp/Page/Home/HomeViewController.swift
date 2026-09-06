@@ -20,7 +20,7 @@ class HomeViewController: BaseViewController {
 //        }).disposed(by: disposeBag)
         cx.navigationBar?.allBackgroundColor = .clear
         cx.navigationBar?.titleColor = .white
-        cx.navigationBar?.leftImage = "back_white"
+        cx.navigationBar?.leftImage = ""
         
     }
     

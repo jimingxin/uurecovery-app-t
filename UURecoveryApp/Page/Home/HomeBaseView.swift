@@ -157,14 +157,14 @@ extension HomeBaseView: UIScrollViewDelegate {
             UIView.animate(withDuration: 0.3) {
                 vc.cx.navigationBar?.allBackgroundColor = .white
                 vc.cx.navigationBar?.titleColor = .color_333
-                vc.cx.navigationBar?.leftImage = "common_icon_bg_color"
+                vc.cx.navigationBar?.leftImage = ""
             }
         } else {
             vc.cx.navigationBar?.title = ""
             UIView.animate(withDuration: 0.3) {
                 vc.cx.navigationBar?.allBackgroundColor = .clear
                 vc.cx.navigationBar?.titleColor = .white
-                vc.cx.navigationBar?.leftImage = "back_white"
+                vc.cx.navigationBar?.leftImage = ""
             }
         }
     }

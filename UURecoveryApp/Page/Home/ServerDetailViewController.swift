@@ -156,10 +156,8 @@ class ServerDetailViewController: BaseViewController {
                 flex.addItem(v_time).width(100%)
                 // 选择套餐
                 flex.addItem(v_order_select).margin(10).height(Const.adaptHeight(80))
-                // 技术费说明（根据版本判断是否显示）
-                if Tools.checkUpdate() {
-                    flex.addItem(v_tech_fee).marginLeft(10).marginRight(10).marginTop(0).height(26)
-                }
+                // 技术费说明始终显示
+                flex.addItem(v_tech_fee).marginLeft(10).marginRight(10).marginTop(0).height(20)
                 // 方案对比
                 addCompareView(flex: flex)
                 // 添加支付宝支付
@@ -233,6 +231,9 @@ class ServerDetailViewController: BaseViewController {
     
     override func bindViewModel() {
         btn_tech_fee.rx.tap.bind { [weak self] _ in
+            guard Tools.checkUpdate() else {
+                return
+            }
             self?.openTechFeeWebView()
         }.disposed(by: disposeBag)
 
